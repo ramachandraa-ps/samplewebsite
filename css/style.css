@@ -1,0 +1,72 @@
+/* General body settings */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Navbar and categories */
+.navbar {
+    padding: 10px;
+}
+
+.nav-link {
+    margin-right: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Card layout (4 per row) */
+#newsCards .col-md-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+/* Light/Dark Mode Toggle */
+.switch .slider {
+    background-color: red; /* Vibrant red color for light mode visibility */
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Footer */
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer a {
+    margin: 0 5px;
+    color: #000;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Country Dropdown Styling */
+.form-select {
+    font-size: 1rem;
+    padding: 6px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
