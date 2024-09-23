@@ -2,10 +2,10 @@ const darkModeToggle = document.getElementById("darkModeToggle");
 const body = document.body;
 // Main JavaScript logic for the News App
 
-const apiKey = '9a1209ba371346bea763f576b2b1df36';
+const apiKey = '93d49685a5c74cc792d3d86c9e342dc3';
 let currentPage = 1;
 let selectedLanguage = 'en';
-let selectedCategory = '';
+let selectedCategory = 'sports';
 let selectedCountry = 'us';
 let searchQuery = '';
 
@@ -42,38 +42,12 @@ function displayNews(articles) {
     });
 }
 
-// Search Functionality
-document.getElementById('searchButton').addEventListener('click', () => {
-    searchQuery = document.getElementById('searchInput').value;
-    fetchNews(currentPage);
-});
-
-// Country Selection
-document.getElementById('countryDropdown').addEventListener('change', () => {
-    selectedCountry = document.getElementById('countryDropdown').value;
-    fetchNews(currentPage);
-});
-
 // Category Selection
 document.querySelectorAll('[data-category]').forEach(categoryLink => {
     categoryLink.addEventListener('click', function () {
         selectedCategory = this.getAttribute('data-category');
         fetchNews(currentPage);
     });
-});
-
-// Language Selection
-document.querySelectorAll('[data-language]').forEach(languageLink => {
-    languageLink.addEventListener('click', function () {
-        selectedLanguage = this.getAttribute('data-language');
-        fetchNews(currentPage);
-    });
-});
-
-// Light/Dark Mode Toggle
-document.getElementById('toggleMode').addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
 });
 
 // Pagination Buttons
